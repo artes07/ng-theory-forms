@@ -19,6 +19,9 @@ export class AppComponent {
   defaultAnswer = 'no';
   defaultCountry = 'ru';
 
+  formData: {};
+  isSubmited = false;
+
   addRandEmail() {
     const randEmail = 'test@gmail.com';
     /*this.form.setValue({
@@ -35,6 +38,9 @@ export class AppComponent {
   }
 
   submitForm() {
+    this.isSubmited = true;
     console.log('Submited!', this.form);
+    this.formData = this.form.value;
+    this.form.reset();
   }
 }

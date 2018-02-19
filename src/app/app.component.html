@@ -61,5 +61,13 @@
     >Save</button>
 
   </form>
+
+  <div *ngIf="isSubmited">
+    <pre>
+      {{ formData | json }}
+    </pre>
+  </div>
+
 </div>
+
 
